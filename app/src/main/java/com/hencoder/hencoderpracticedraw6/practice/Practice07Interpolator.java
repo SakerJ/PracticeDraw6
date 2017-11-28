@@ -65,6 +65,7 @@ public class Practice07Interpolator extends LinearLayout {
         interpolators[6] = new AnticipateOvershootInterpolator();
         interpolators[7] = new BounceInterpolator();
         interpolators[8] = new CycleInterpolator(0.5f);
+        // PathInterpolator中的Path：起点必须是0,0 重点必须是1,1
         interpolators[9] = PathInterpolatorCompat.create(interpolatorPath);
         interpolators[10] = new FastOutLinearInInterpolator();
         interpolators[11] = new FastOutSlowInInterpolator();
