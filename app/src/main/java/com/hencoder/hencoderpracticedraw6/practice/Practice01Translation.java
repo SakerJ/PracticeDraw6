@@ -34,6 +34,8 @@ public class Practice01Translation extends RelativeLayout {
         super(context, attrs, defStyleAttr);
     }
 
+    private int sum;
+
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
@@ -49,6 +51,28 @@ public class Practice01Translation extends RelativeLayout {
             @Override
             public void onClick(final View v) {
                 // TODO 在这里处理点击事件，通过 View.animate().translationX/Y/Z() 来让 View 平移
+                int type = sum % 6;
+                switch (type) {
+                    case 0:
+                        imageView.animate().translationX(500);
+                        break;
+                    case 1:
+                        imageView.animate().translationX(0);
+                        break;
+                    case 2:
+                        imageView.animate().translationY(200);
+                        break;
+                    case 3:
+                        imageView.animate().translationY(0);
+                        break;
+                    case 4:
+                        imageView.animate().translationZ(50);
+                        break;
+                    case 5:
+                        imageView.animate().translationZ(0);
+                        break;
+                }
+                ++sum;
             }
         });
     }

@@ -3,6 +3,7 @@ package com.hencoder.hencoderpracticedraw6.practice;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -65,6 +66,11 @@ public class Practice06Duration extends LinearLayout {
             @Override
             public void onClick(View v) {
                 // TODO 在这里处理点击事件，执行动画。记得使用 `setDuration(duration)` 来设置动画的时长。
+                if (imageView.getTranslationX() == 0) {
+                    imageView.animate().translationX(500).setDuration(duration);
+                } else {
+                    imageView.animate().translationX(0).setDuration(duration);
+                }
             }
         });
     }
